@@ -23,7 +23,15 @@ genai.configure(api_key="AIzaSyDlGuiJOqQePVsQEu5gWiftb74RDGvcq-c")
 
 # Set up Streamlit
 st.set_page_config(page_title="Multimodal AI Summarizer", layout="wide")
-st.title("Multimodal AI Summarizer")
+st.markdown(
+    """
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1 style="margin: 0;">Multimodal AI Summarizer 🎥🖬</h1>
+        <span style="font-size: 24px; font-weight: bold;">Created by: Muhammad Uzair</span>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 def get_pdf_text(pdf_docs):
     text = ""
